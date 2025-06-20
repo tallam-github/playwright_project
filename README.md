@@ -1,5 +1,5 @@
 # Playwright Documentation Link
-1. Playwright Tutorial Full Course - https://playwright.dev/docs/intro
+1. Playwright Documentation Link - https://playwright.dev/docs/intro
 
 #### Install Playwright & Select Configurations
 - npm init playwright@latest
