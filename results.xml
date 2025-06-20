@@ -1,0 +1,11 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="4.1698189999999995">
+<testsuite name="Pomtest.spec.js" timestamp="2025-06-20T19:18:47.146Z" hostname="chromium" tests="1" failures="0" skipped="0" time="2.557" errors="0">
+<testcase name="Checkout Order Test Suite › 6=&gt;Checkout Page=&gt;Order Confirmation=&gt;Validation" classname="Pomtest.spec.js" time="2.557">
+<system-out>
+<![CDATA[Sauce Labs Backpack
+Page title is Swag Labs
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

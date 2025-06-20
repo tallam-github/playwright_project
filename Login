@@ -1,0 +1,26 @@
+SyntaxError: /Users/user/IdeaProjects/playwright_project/tests/Tags.spec.js: Identifier 'test' has already been declared. (2:8)
+
+  1 | const {test, expect} = require('@playwright/test');
+> 2 | import {test, expect} from '@playwright/test';
+    |         ^
+  3 | import { LoginPage } from './pages/LoginPage.js';
+  4 | test.only('@1=>Login With Valid Credentials',async ({page})=>{
+  5 |     console.log('this is my test1.....')
+
+   at Tags.spec.js:2
+
+  1 | const {test, expect} = require('@playwright/test');
+> 2 | import {test, expect} from '@playwright/test';
+    |        ^
+  3 | import { LoginPage } from './pages/LoginPage.js';
+  4 | test.only('@1=>Login With Valid Credentials',async ({page})=>{
+  5 |     console.log('this is my test1.....')
+Error: No tests found.
+Make sure that arguments are regular expressions matching test files.
+You may need to escape symbols like "$" or "*" and quote the arguments.
+
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m

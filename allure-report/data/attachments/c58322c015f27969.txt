@@ -1,0 +1,3 @@
+Sauce Labs Backpack
+Page title is Swag Labs
+6=>This Test=>Checkout Page=>Order Confirmation=>Validation......
