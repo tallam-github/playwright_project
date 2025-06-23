@@ -8,4 +8,5 @@ export const config = {
   baseURL: process.env.BASE_URL,
   username: process.env.USERNAME,
   password: process.env.PASSWORD,
+  invalidusername: process.env.INVALIDUSERNAME,
 };

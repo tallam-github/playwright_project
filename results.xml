@@ -1,6 +1,28 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="4.1698189999999995">
-<testsuite name="Pomtest.spec.js" timestamp="2025-06-20T19:18:47.146Z" hostname="chromium" tests="1" failures="0" skipped="0" time="2.557" errors="0">
-<testcase name="Checkout Order Test Suite › 6=&gt;Checkout Page=&gt;Order Confirmation=&gt;Validation" classname="Pomtest.spec.js" time="2.557">
+<testsuites id="" name="" tests="6" failures="0" skipped="0" errors="0" time="3.736236">
+<testsuite name="Pomtest.spec.js" timestamp="2025-06-23T18:37:18.794Z" hostname="chromium" tests="6" failures="0" skipped="0" time="13.238" errors="0">
+<testcase name="Login Test Suite › 1=&gt;Login With Valid Credentials" classname="Pomtest.spec.js" time="2.052">
+<system-out>
+<![CDATA[Page title is Swag Labs
+]]>
+</system-out>
+</testcase>
+<testcase name="Login Test Suite › 2=&gt;Login With Invalid Credentials" classname="Pomtest.spec.js" time="1.86">
+</testcase>
+<testcase name="Products List Test Suite › 3=&gt;Home Page=&gt;Products List=&gt;Validation" classname="Pomtest.spec.js" time="2.196">
+</testcase>
+<testcase name="Cart Page Test Suite › 4=&gt;Cart Page=&gt;Cart Items=&gt;Validation" classname="Pomtest.spec.js" time="2.195">
+<system-out>
+<![CDATA[Sauce Labs Backpack
+]]>
+</system-out>
+</testcase>
+<testcase name="Cart Item Remove Test Suite › 5=&gt;Cart Item Page=&gt;Remove=&gt;Validation" classname="Pomtest.spec.js" time="2.265">
+<system-out>
+<![CDATA[Sauce Labs Backpack
+]]>
+</system-out>
+</testcase>
+<testcase name="Checkout Order Test Suite › 6=&gt;Checkout Page=&gt;Order Confirmation=&gt;Validation" classname="Pomtest.spec.js" time="2.67">
 <system-out>
 <![CDATA[Sauce Labs Backpack
 Page title is Swag Labs
