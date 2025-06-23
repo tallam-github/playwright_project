@@ -5,14 +5,15 @@ import { HomePage } from './pages/HomePage';
 import { CartPage } from './pages/CartPage';
 import {RemoveCartItemPage} from './pages/RemoveCartItemPage';
 import { CheckoutPage } from './pages/CheckoutPage';
+ import { config } from './config/config';
 //#######################################################################################################
 //Login Functionality=>Test successful login with valid credentials
 //#######################################################################################################
 test.describe('Login Test Suite', () => {
 test('@Smoke_Test=>1. Login With Valid Credentials' ,async ({page})=>{
     const login = new LoginPage(page);
-    await login.gotoLoginPage();
-    await login.login('standard_user', 'secret_sauce')
+    await page.goto(config.baseURL);
+    await login.login(config.username, config.password)
     const pageTitle=await page.title();
     console.log('Page title is', pageTitle);
     await expect(page).toHaveTitle('Swag Labs');
@@ -23,8 +24,8 @@ test('@Smoke_Test=>1. Login With Valid Credentials' ,async ({page})=>{
 //#######################################################################################################
 test('@Smoke_Test=>2. Login With Invalid Credentials', async ({page})=>{              
      const login=new LoginPage(page);
-     await login.gotoLoginPage();
-     await login.login('nonstandard_user', 'secret_sauce');
+     await page.goto(config.baseURL);
+     await login.login(config.invalidusername, config.password)
      await expect(login.errorMessageLocator).toContainText('Username and password do not match any user in this service');
     console.log('2=>This Test=>Login With Invalid Credentials=>Validation.....') 
     });
@@ -35,20 +36,20 @@ test('@Smoke_Test=>2. Login With Invalid Credentials', async ({page})=>{
 test.describe('Login Test Suite', () => {
 test('@Regression_Test=>1. Login With Valid Credentials' ,async ({page})=>{
     const login = new LoginPage(page);
-    await login.gotoLoginPage();
-    await login.login('standard_user', 'secret_sauce')
+    await page.goto(config.baseURL);
+    await login.login(config.username, config.password)
     const pageTitle=await page.title();
     console.log('Page title is', pageTitle);
     await expect(page).toHaveTitle('Swag Labs');
-    console.log('1=>This Test=>Login With Valid Credentials.....')
+    console.log('1=>This Test=>Login With Valid Credentials=>Validation.....')
 });
 //#######################################################################################################
 //Login Functionality=>Invalid Credentials=>Test failed login with invalid credentials
 //#######################################################################################################
 test('@Regression_Test=>2. Login With Invalid Credentials', async ({page})=>{              
      const login=new LoginPage(page);
-     await login.gotoLoginPage();
-     await login.login('nonstandard_user', 'secret_sauce');
+     await page.goto(config.baseURL);
+     await login.login(config.invalidusername, config.password)
      await expect(login.errorMessageLocator).toContainText('Username and password do not match any user in this service');
      console.log('2=>This Test=>Login With Invalid Credentials=>Validation.....')
    });  
@@ -59,8 +60,8 @@ test('@Regression_Test=>2. Login With Invalid Credentials', async ({page})=>{
 test.describe('Products List Test Suite', () => {
 test('@Regression_Test=>3. Home Page=>Products List=>Validation', async ({page})=>{
     const login=new LoginPage(page);
-    await login.gotoLoginPage();
-    await login.login('standard_user', 'secret_sauce')
+    await page.goto(config.baseURL);
+    await login.login(config.username, config.password)
     const home=new HomePage(page);
     await home.addProductToCart("Sauce Labs Backpack'")
     await home.gotoCart();
@@ -73,8 +74,8 @@ test('@Regression_Test=>3. Home Page=>Products List=>Validation', async ({page})
 test.describe('Cart Page Test Suite', () => {
 test('@Regression_Test=>4. Cart Page=>Cart Items=>Validation', async ({page})=>{
     const login=new LoginPage(page);
-    await login.gotoLoginPage();
-    await login.login('standard_user', 'secret_sauce')
+    await page.goto(config.baseURL);
+    await login.login(config.username, config.password)
     const home=new HomePage(page);
     await home.addProductToCart("Sauce Labs Backpack'")
     await home.gotoCart();
@@ -91,8 +92,8 @@ test.describe('Cart Item Remove Test Suite', () => {
 test('@Regression_Test=>5. Cart Item Page=>Remove=>Validation', async ({page})=>{
 //Cart Item Page=>Remove=>Remove an item from the cart and verify it is removed=>Validation
     const login=new LoginPage(page);
-    await login.gotoLoginPage();
-    await login.login('standard_user', 'secret_sauce')
+    await page.goto(config.baseURL);
+    await login.login(config.username, config.password)
     const home=new HomePage(page);
     await home.addProductToCart("Sauce Labs Backpack'")
     await home.gotoCart();
@@ -113,8 +114,8 @@ test('@Regression_Test=>5. Cart Item Page=>Remove=>Validation', async ({page})=>
 test.describe('Checkout Order Test Suite', () => {
 test('@Regression_Test=>6. Checkout Page=>Order Confirmation=>Validation', async ({page})=>{
     const login=new LoginPage(page);
-    await login.gotoLoginPage();
-    await login.login('standard_user', 'secret_sauce')
+   await page.goto(config.baseURL);
+    await login.login(config.username, config.password)
     const home=new HomePage(page);
     await home.addProductToCart("Sauce Labs Backpack'")
     await home.gotoCart();

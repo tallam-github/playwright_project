@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 6
+      "actualWorkers": 1
     },
     "preserveOutput": "always",
     "reporter": [
@@ -53,7 +53,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 6
+          "actualWorkers": 1
         },
         "id": "chromium",
         "name": "chromium",
@@ -69,7 +69,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 6
+          "actualWorkers": 1
         },
         "id": "firefox",
         "name": "firefox",
@@ -85,7 +85,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 6
+          "actualWorkers": 1
         },
         "id": "webkit",
         "name": "webkit",
@@ -106,283 +106,87 @@
   },
   "suites": [
     {
-      "title": "Pomtest.spec.js",
-      "file": "Pomtest.spec.js",
+      "title": "Assertions.spec.js",
+      "file": "Assertions.spec.js",
       "column": 0,
       "line": 0,
-      "specs": [],
-      "suites": [
+      "specs": [
         {
-          "title": "Login Test Suite",
-          "file": "Pomtest.spec.js",
-          "line": 10,
-          "column": 14,
-          "specs": [
+          "title": "AssertionsTest",
+          "ok": true,
+          "tags": [],
+          "tests": [
             {
-              "title": "1=>Login With Valid Credentials",
-              "ok": true,
-              "tags": [],
-              "tests": [
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
                 {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1078,
+                  "errors": [],
+                  "stdout": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 2052,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Page title is Swag Labs\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-06-23T18:37:19.493Z",
-                      "annotations": [],
-                      "attachments": []
+                      "text": "Page title is Swag Labs\n"
+                    },
+                    {
+                      "text": "Landing Page is Success...Page Tile is Displayed\n"
+                    },
+                    {
+                      "text": "Landing Page is Success...Logo is Displayed\n"
+                    },
+                    {
+                      "text": "Element matches text is Success...\n"
+                    },
+                    {
+                      "text": "Element contains text is Success...\n"
+                    },
+                    {
+                      "text": "Input has a value is Success...\n"
+                    },
+                    {
+                      "text": "Launching Application URL=> Is Sucess\n"
+                    },
+                    {
+                      "text": "Provide User Name input is Success...\n"
+                    },
+                    {
+                      "text": "Provide Password input is Success...\n"
+                    },
+                    {
+                      "text": "Click on Log in Button is Success...\n"
+                    },
+                    {
+                      "text": "List of elements has given length is Success...\n"
                     }
                   ],
-                  "status": "expected"
-                }
-              ],
-              "id": "0d912305f3a065a60688-9c0be183f97664d6884e",
-              "file": "Pomtest.spec.js",
-              "line": 12,
-              "column": 13
-            },
-            {
-              "title": "2=>Login With Invalid Credentials",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-06-23T19:32:34.584Z",
                   "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 1860,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-06-23T18:37:19.499Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "attachments": []
                 }
               ],
-              "id": "0d912305f3a065a60688-7b6650b5eb4f4e6329bb",
-              "file": "Pomtest.spec.js",
-              "line": 22,
-              "column": 13
+              "status": "expected"
             }
-          ]
-        },
-        {
-          "title": "Products List Test Suite",
-          "file": "Pomtest.spec.js",
-          "line": 30,
-          "column": 14,
-          "specs": [
-            {
-              "title": "3=>Home Page=>Products List=>Validation",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
-                      "status": "passed",
-                      "duration": 2196,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-06-23T18:37:19.499Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "0d912305f3a065a60688-8ca0fb4db82188842c83",
-              "file": "Pomtest.spec.js",
-              "line": 31,
-              "column": 13
-            }
-          ]
-        },
-        {
-          "title": "Cart Page Test Suite",
-          "file": "Pomtest.spec.js",
-          "line": 41,
-          "column": 14,
-          "specs": [
-            {
-              "title": "4=>Cart Page=>Cart Items=>Validation",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
-                      "status": "passed",
-                      "duration": 2195,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Sauce Labs Backpack\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-06-23T18:37:19.494Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "0d912305f3a065a60688-6541273e7b77576f8a88",
-              "file": "Pomtest.spec.js",
-              "line": 42,
-              "column": 13
-            }
-          ]
-        },
-        {
-          "title": "Cart Item Remove Test Suite",
-          "file": "Pomtest.spec.js",
-          "line": 55,
-          "column": 14,
-          "specs": [
-            {
-              "title": "5=>Cart Item Page=>Remove=>Validation",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 4,
-                      "parallelIndex": 4,
-                      "status": "passed",
-                      "duration": 2265,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Sauce Labs Backpack\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-06-23T18:37:19.502Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "0d912305f3a065a60688-059e996ea85ef710ab25",
-              "file": "Pomtest.spec.js",
-              "line": 56,
-              "column": 13
-            }
-          ]
-        },
-        {
-          "title": "Checkout Order Test Suite",
-          "file": "Pomtest.spec.js",
-          "line": 74,
-          "column": 15,
-          "specs": [
-            {
-              "title": "6=>Checkout Page=>Order Confirmation=>Validation",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 5,
-                      "parallelIndex": 5,
-                      "status": "passed",
-                      "duration": 2670,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Sauce Labs Backpack\n"
-                        },
-                        {
-                          "text": "Page title is Swag Labs\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-06-23T18:37:19.495Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "0d912305f3a065a60688-937f026693dadc611608",
-              "file": "Pomtest.spec.js",
-              "line": 75,
-              "column": 14
-            }
-          ]
+          ],
+          "id": "add8f3c04cdcd95add13-a336a0792e0574ca3668",
+          "file": "Assertions.spec.js",
+          "line": 3,
+          "column": 1
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-06-23T18:37:18.769Z",
-    "duration": 3736.236,
-    "expected": 6,
+    "startTime": "2025-06-23T19:32:33.971Z",
+    "duration": 1896.6840000000002,
+    "expected": 1,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
